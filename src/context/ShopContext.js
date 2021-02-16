@@ -24,9 +24,13 @@ class ShopProvider extends Component {
   }
 
   createCheckout = async () => {
-    const checkout = await client.checkout.create();
-    this.setState({ checkout: checkout });
-    console.log("This label here", checkout);
+    try {
+        const checkout = await client.checkout.create();
+        this.setState({ ...this.state, checkout: checkout });
+    } catch (error) {
+        throw new Error(error);
+    }
+    
   };
 
   addItemToCheckout = async (variantId, quantity) => {

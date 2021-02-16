@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 import { Container, Text, Div, Row, Col, Button } from "atomize";
@@ -27,24 +28,9 @@ export default function ProductPage() {
             bgImg={product.images[1].src}
             bgSize="cover"
             bgPos="center center"
-            // h="44rem"
             h={{ xs: "30rem", md: "20rem", lg: "40rem" }}
-            // w="30rem"
           ></Div>
-          {/* <Div>
-            <Text>{product.title}</Text>
-            <Text>{product.variants[0].price}</Text>
-            <Button
-              onClick={() => {
-                  console.log("value is", product.variants[0].id)
-                  console.log("type of value is", typeof(product.variants[0].id))
-                addItemToCheckout(product.variants[0].id, 1);
-                openCart();
-              }}
-            >
-              Add to Cart
-            </Button>
-          </Div> */}
+          
         </Col>
         <Col p={{ t: { xs: "1rem", md: "4rem" } }}>
           <Text>{product.title}</Text>
@@ -56,6 +42,9 @@ export default function ProductPage() {
             }}
           >
             Add to Cart
+          </Button>
+          <Button m={{ y: { xs: '1rem', md: '1rem' }}}>
+            <Link to='/'>Store</Link>
           </Button>
         </Col>
       </Row>
