@@ -19,7 +19,7 @@ export default function HomePage() {
                     <Col key={product.id}  size={{ xs: '12', md: '4', lg: '3' }}
                     >
                         <Link to={`products/${product.id}`}>
-                            <Div p="2rem">
+                            <Div p="2rem" shadow="1" hoverShadow={{ xm: 'none', md:'2', lg:'3'}}>
                                 <Div h="20rem" bgImg={product.images[1].src} bgSize="cover" bgPos="center center">                                    
                                 </Div>
                                 <Text>{product.title}</Text>
