@@ -22,10 +22,11 @@ export default function HomePage() {
                     >
                         <Link to={`products/${product.id}`}>
                             <Div p="2rem" shadow="1" hoverShadow={{ xm: 'none', md:'2', lg:'3'}}>
-                                <Div h="20rem" bgImg={product.images.src} bgSize="cover" bgPos="center center">                                    
+                            <Text m="2rem" style={{color: "red", fontWeight: "bold"}}>{product.title}</Text>
+                                <Div h="20rem" bgImg={product.images.src} bgSize="cover" bgPos="center">                                    
                                 </Div>
-                                <Text>{product.title}</Text>
-                                <Text>{product.variants[0].price}</Text>
+                                {/* <Text m="2rem" style={{color: "red", fontWeight: "bold"}}>{product.title}</Text> */}
+                                {/* <Text>{product.variants[0].price}</Text> */}
                             </Div>                        
                         </Link>
                         </Col>
