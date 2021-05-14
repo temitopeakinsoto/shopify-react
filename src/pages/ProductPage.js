@@ -19,11 +19,14 @@ export default function ProductPage() {
     fetchProductWithId(id);
     return () => {};
   }, [fetchProductWithId, id]);
+ 
 
   function sendEmail(e) {
     e.preventDefault();
+    console.log('Sending form...')
+    
 
-    emailjs.sendForm('gmail', 'template_t56yy6a', e.target, 'user_fkdZqPHZfg6TstgalASyQ')
+    emailjs.sendForm('service_3daumnm', 'template_t56yy6a', e.target, 'user_fkdZqPHZfg6TstgalASyQ')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -61,7 +64,7 @@ export default function ProductPage() {
           >
             Interested
           </Button>          
-          {interested && <form onSubmit={() => sendEmail}><Input type="email" name="email" required placeholder="Enter your email" /><Button>submit</Button></form>}
+          {interested && <form onSubmit={sendEmail}><Input type="email" name="email" required placeholder="Enter your email" /><Button>submit</Button></form>}
         </Col>
       </Row>
     </Container>

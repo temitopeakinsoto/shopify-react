@@ -9,6 +9,7 @@
     "atomize": "^1.0.26",
     "axios": "^0.21.1",
     "emailjs": "^3.4.0",
+    "emailjs-com": "^2.6.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
