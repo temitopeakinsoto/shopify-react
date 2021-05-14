@@ -5,10 +5,10 @@ import Client from "shopify-buy";
 const ShopContext = React.createContext();
 
 // Initializing a client to return content in the store's primary language
-const client = Client.buildClient({
-  domain: "graphql.myshopify.com",
-  storefrontAccessToken: "dd4d4dc146542ba7763305d71d1b3d38",
-});
+// const client = Client.buildClient({
+//   domain: "graphql.myshopify.com",
+//   storefrontAccessToken: "dd4d4dc146542ba7763305d71d1b3d38",
+// });
 
 const productList = [
   {
@@ -71,32 +71,32 @@ class ShopProvider extends Component {
     isCartOpen: false,
   };
 
-  componentDidMount() {
-    this.createCheckout();
-  }
+  // componentDidMount() {
+  //   this.createCheckout();
+  // }
 
-  createCheckout = async () => {
-    try {
-      const checkout = await client.checkout.create();
-      this.setState({ ...this.state, checkout: checkout });
-    } catch (error) {
-      throw new Error(error);
-    }
-  };
+  // createCheckout = async () => {
+  //   try {
+  //     const checkout = await client.checkout.create();
+  //     this.setState({ ...this.state, checkout: checkout });
+  //   } catch (error) {
+  //     throw new Error(error);
+  //   }
+  // };
 
-  addItemToCheckout = async (variantId, quantity) => {
-    const lineItemsToAdd = [
-      {
-        variantId,
-        quantity: parseInt(quantity, 10),
-      },
-    ];
-    const checkout = client.checkout.addLineItems(
-      this.state.checkout.id,
-      lineItemsToAdd
-    );
-    this.setState({ checkout: checkout });
-  };
+  // addItemToCheckout = async (variantId, quantity) => {
+  //   const lineItemsToAdd = [
+  //     {
+  //       variantId,
+  //       quantity: parseInt(quantity, 10),
+  //     },
+  //   ];
+  //   const checkout = client.checkout.addLineItems(
+  //     this.state.checkout.id,
+  //     lineItemsToAdd
+  //   );
+  //   this.setState({ checkout: checkout });
+  // };
 
   fetchAllProducts = async () => {
     // const products = await client.product.fetchAll();

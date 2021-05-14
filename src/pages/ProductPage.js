@@ -10,9 +10,7 @@ export default function ProductPage() {
   const { id } = useParams();
   const {
     fetchProductWithId,
-    addItemToCheckout,
-    product,
-    openCart,
+    product
   } = useContext(ShopContext);
 
   useEffect(() => {
