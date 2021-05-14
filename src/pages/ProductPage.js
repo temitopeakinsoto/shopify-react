@@ -102,6 +102,7 @@ function ProductPage(props) {
                     </Text>
                     <Text>Waranty: {variant.waranty}</Text>
                     <Text>Insurance: {variant.insurance}</Text>
+                    <Text>Installation: <span style={{color: 'red'}}>{'FREE'}</span></Text>
                   </div>
                   <img alt="product pic" src={variant.img || ""} />
                 </div>

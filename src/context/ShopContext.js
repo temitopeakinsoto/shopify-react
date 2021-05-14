@@ -39,7 +39,7 @@ const productList = [
       { title: "Haier HP70J20AL-V2 -Digital Microwave Oven - 20 Litres - Black", size: 32, price: 8699, rent: 25000, waranty: '12 Months', insurance:'Yes', img:'https://bit.ly/3brNtAV' },
       { title: "Bruhm BME-20GM, Digital Microwave Oven With Grill, 20L - White", size: 32, price: 7990, rent: 25000, waranty: '12 Months', insurance:'Yes', img:'https://bit.ly/3oe3Eae' },
     ],
-    images: { src: "https://bit.ly/33KxKIW" },
+    images: { src: "https://bit.ly/3oe3Eae" },
   },
   {
     id: 4,
