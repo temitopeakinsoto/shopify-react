@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useParams, withRouter } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 import {
   Container,
@@ -11,11 +11,10 @@ import {
   Col,
   Button,
   Input,
-  Img,
   Modal,
 } from "atomize";
 
-export default function ProductPage() {
+function ProductPage(props) {
   const [interested, setInterested] = useState(false);
   const [interest, setInterest] = useState("");
   const [msg, setMsg] = useState(false);
@@ -51,6 +50,7 @@ export default function ProductPage() {
     setMsg(true);
     setTimeout(() => {
       setMsg(false);
+      props.history.push('/')
     }, 1000);
   }
 
@@ -105,17 +105,7 @@ export default function ProductPage() {
                   </div>
                   <img alt="product pic" src={variant.img || ""} />
                 </div>
-              </Div>
-            ))}
-          </Div>
-          <Text m={{ t: "2rem" }}>
-            Would you be interested in renting one or more of these{" "}
-            <span style={{ color: "red", fontWeight: "bold" }}>
-              {product.title}{" "}
-            </span>
-            from us?
-            <span>
-              <Div d="flex" m={{ b: "3rem" }}>
+                <Div d="flex">
                 <Button
                   onClick={() => {
                     setInterested(true);
@@ -126,7 +116,7 @@ export default function ProductPage() {
                     x: { xs: "auto", md: "auto" },
                   }}
                 >
-                  Rent
+                  <a href="#formSection">Rent</a>
                 </Button>
                 <Button
                   m={{
@@ -138,8 +128,20 @@ export default function ProductPage() {
                     setInterest("Rent to Own");
                   }}
                 >
-                  Rent + Own
-                </Button>
+                  <a href="#formSection">Rent + Own</a>
+                </Button>                  
+                </Div>
+              </Div>
+            ))}
+          </Div>
+          <Text m={{ t: "2rem" }}>
+            Would you be interested in renting one or more of these{" "}
+            <span style={{ color: "red", fontWeight: "bold" }}>
+              {product.title}{" "}
+            </span>
+            from us?
+            <span>
+              <Div d="flex" m={{ b: "3rem" }}>                
                 <Button
                   m={{
                     y: { xs: "1rem", md: "0rem" },
@@ -160,7 +162,7 @@ export default function ProductPage() {
                 </Modal>
               )}
           </Text>
-          {interested && (
+          <div id="formSection">{interested && (
             <form style={{ marginBottom: "5rem" }} onSubmit={sendEmail}>
               <Input
                 m={{ t: "1rem", b: "1rem" }}
@@ -200,9 +202,11 @@ export default function ProductPage() {
                 </Button>
               </Div>
             </form>
-          )}
+          )}</div>
         </Col>
       </Row>
     </Container>
   );
 }
+
+export default withRouter(ProductPage);
