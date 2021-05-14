@@ -34,7 +34,7 @@ export default function ProductPage() {
     emailjs
       .sendForm(
         "service_3daumnm",
-        "template_t56yy6aFUCK",
+        "template_t56yy6a",
         e.target,
         "user_fkdZqPHZfg6TstgalASyQ"
       )
