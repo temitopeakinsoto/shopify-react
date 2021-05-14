@@ -19,7 +19,7 @@ const productList = [
       { title: "Von VEL40FBAF/VEL40FBCF 40inch LED TV, Digital", price: 33570, rent: 25000, waranty: '12 Months', insurance:'Yes', img: 'https://bit.ly/33L7deJ' },
       { title: "Sony 32inch 32R300 Digital LED HD TV - Black", price: 22900, rent: 25000, waranty: '12 Months', insurance:'Yes', img:'https://bit.ly/3ydLFFp' },
     ],
-    images: { src: "https://bit.ly/2R7XmwX" },
+    images: { src: "https://bit.ly/3bJ3sej" },
   },
   {
     id: 2,
@@ -36,8 +36,8 @@ const productList = [
     title: "Microwave Ovens",
     variants: [
       { title: "Nunix 20L Electric Rotisserie Oven", size: 32, price:  6299, rent: 25000, waranty: '12 Months', insurance:'Yes', img:'https://bit.ly/3hoo2nA' },
-      { title: "Haier HP70J20AL-V2 -Digital Microwave Oven - 20 Litres - Black", size: 32, price: '8,699', rent: 25000, waranty: '12 Months', insurance:'Yes', img:'https://bit.ly/3brNtAV' },
-      { title: "Bruhm BME-20GM, Digital Microwave Oven With Grill, 20L - White", size: 32, price: '7,990', rent: 25000, waranty: '12 Months', insurance:'Yes', img:'https://bit.ly/3oe3Eae' },
+      { title: "Haier HP70J20AL-V2 -Digital Microwave Oven - 20 Litres - Black", size: 32, price: 8699, rent: 25000, waranty: '12 Months', insurance:'Yes', img:'https://bit.ly/3brNtAV' },
+      { title: "Bruhm BME-20GM, Digital Microwave Oven With Grill, 20L - White", size: 32, price: 7990, rent: 25000, waranty: '12 Months', insurance:'Yes', img:'https://bit.ly/3oe3Eae' },
     ],
     images: { src: "https://bit.ly/33KxKIW" },
   },
